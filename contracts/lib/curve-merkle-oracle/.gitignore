@@ -1,0 +1,8 @@
+__pycache__
+.history
+.hypothesis/
+build/
+reports/
+.DS_Store
+.env
+/venv

@@ -1,0 +1,23 @@
+dependencies:
+  - hamdiallam/Solidity-RLP@2.0.5
+
+compiler:
+  solc:
+    version: 0.6.12
+    optimizer:
+      enabled: true
+      runs: 200
+
+networks:
+  default: development
+  development:
+    cmd: ganache-cli
+    host: http://127.0.0.1
+    timeout: 120
+    cmd_settings:
+      port: 8545
+      gas_limit: 12000000
+      accounts: 10
+      evm_version: istanbul
+      mnemonic: brownie
+      fork: https://archive-node.address

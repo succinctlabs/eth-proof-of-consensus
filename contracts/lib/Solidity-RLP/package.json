@@ -1,0 +1,37 @@
+{
+  "name": "solidity-rlp",
+  "author": "Hamdi Allam",
+  "version": "2.0.5",
+  "description": "solidity rlp encoder/decoder",
+  "keywords": [
+    "solidity",
+    "rlp",
+    "decoding",
+    "smart contract",
+    "ethereum"
+  ],
+  "main": "truffle.js",
+  "files": [
+    "contracts",
+    "test"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hamdiallam/solidity-rlp.git"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/hamdiallam/solidity-rlp/issues"
+  },
+  "homepage": "https://github.com/hamdiallam/solidity-rlp#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "rlp": "^2.2.6"
+  }
+}

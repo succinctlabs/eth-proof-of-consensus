@@ -1,0 +1,41 @@
+{
+  "name": "circuits",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:puma314/zk-light-client.git",
+  "author": "\"\"",
+  "license": "MIT",
+  "scripts": {
+    "build:c": "cd ./scripts && ./build.sh",
+    "build:wasm": "cd ./scripts && ./wasm_build.sh",
+    "build:header": "cd ./scripts && ./build_assert_valid_signed_header.sh",
+    "test": "NODE_OPTIONS=--max_old_space_size=56000 mocha -r tsx test/test*.ts",
+    "sample": "tsx scripts/processUpdateFromData.ts"
+  },
+  "devDependencies": {
+    "operator": "1.0.0",
+    "@chainsafe/bls": "^7.1.1",
+    "@chainsafe/lodestar-config": "^0.39.0",
+    "@chainsafe/lodestar-types": "^0.34.4",
+    "@lodestar/api": "^0.40.0",
+    "@lodestar/light-client": "^0.40.0",
+    "@lodestar/types": "^0.40.0",
+    "@noble/bls12-381": "^1.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.0.4",
+    "axios": "^0.27.2",
+    "circom_tester": "^0.0.14",
+    "tsx": ">=3.7.0",
+    "typescript": ">=4.5.0"
+  },
+  "dependencies": {
+    "@chainsafe/blst": "^0.2.4",
+    "@types/chai": "^4.3.1",
+    "@types/expect": "^24.3.0",
+    "circomlib": "^2.0.5",
+    "mocha": "^10.0.0",
+    "snarkjs": "^0.4.22",
+    "ts-node": "^10.9.1"
+  },
+  "type": "module"
+}
