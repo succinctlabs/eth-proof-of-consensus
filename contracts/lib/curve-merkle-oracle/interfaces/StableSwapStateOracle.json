@@ -1,0 +1,449 @@
+[
+  {
+    "inputs": [
+      {
+        "name": "_helper",
+        "type": "address"
+      },
+      {
+        "name": "_admin",
+        "type": "address"
+      },
+      {
+        "name": "_priceUpdateThreshold",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor",
+    "name": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "admin",
+        "type": "address"
+      }
+    ],
+    "name": "AdminChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "threshold",
+        "type": "uint256"
+      }
+    ],
+    "name": "PriceUpdateThresholdChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "timestamp",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "etherBalance",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "stethBalance",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "stethPrice",
+        "type": "uint256"
+      }
+    ],
+    "name": "PriceUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "timestamp",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "poolEthBalance",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "poolAdminEthBalance",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "poolAdminStethBalance",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "stethPoolShares",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "stethTotalShares",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "stethBeaconBalance",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "stethBufferedEther",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "stethDepositedValidators",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "stethBeaconValidators",
+        "type": "uint256"
+      }
+    ],
+    "name": "SlotValuesUpdated",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "MIN_BLOCK_DELAY",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "POOL_ADDRESS",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "POOL_ADMIN_BALANCES_0_POS",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "POOL_ADMIN_BALANCES_1_POS",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "STETH_ADDRESS",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "STETH_BEACON_BALANCE_POS",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "STETH_BEACON_VALIDATORS_POS",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "STETH_BUFFERED_ETHER_POS",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "STETH_DEPOSITED_VALIDATORS_POS",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "STETH_POOL_SHARES_POS",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "STETH_TOTAL_SHARES_POS",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "admin",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "etherBalance",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getProofParams",
+    "outputs": [
+      {
+        "name": "poolAddress",
+        "type": "address"
+      },
+      {
+        "name": "stethAddress",
+        "type": "address"
+      },
+      {
+        "name": "poolAdminEtherBalancePos",
+        "type": "bytes32"
+      },
+      {
+        "name": "poolAdminCoinBalancePos",
+        "type": "bytes32"
+      },
+      {
+        "name": "stethPoolSharesPos",
+        "type": "bytes32"
+      },
+      {
+        "name": "stethTotalSharesPos",
+        "type": "bytes32"
+      },
+      {
+        "name": "stethBeaconBalancePos",
+        "type": "bytes32"
+      },
+      {
+        "name": "stethBufferedEtherPos",
+        "type": "bytes32"
+      },
+      {
+        "name": "stethDepositedValidatorsPos",
+        "type": "bytes32"
+      },
+      {
+        "name": "stethBeaconValidatorsPos",
+        "type": "bytes32"
+      },
+      {
+        "name": "advisedPriceUpdateThreshold",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getState",
+    "outputs": [
+      {
+        "name": "_timestamp",
+        "type": "uint256"
+      },
+      {
+        "name": "_etherBalance",
+        "type": "uint256"
+      },
+      {
+        "name": "_stethBalance",
+        "type": "uint256"
+      },
+      {
+        "name": "_stethPrice",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "priceUpdateThreshold",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_admin",
+        "type": "address"
+      }
+    ],
+    "name": "setAdmin",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_priceUpdateThreshold",
+        "type": "uint256"
+      }
+    ],
+    "name": "setPriceUpdateThreshold",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "stethBalance",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "stethPrice",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_blockHeaderRlpBytes",
+        "type": "bytes"
+      },
+      {
+        "name": "_proofRlpBytes",
+        "type": "bytes"
+      }
+    ],
+    "name": "submitState",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "timestamp",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
