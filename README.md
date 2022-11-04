@@ -4,7 +4,7 @@
 
 ## Overview
 
-At Succinct Labs, we are aiming to build the foundation of a decentralized, permissionless, trust-minimized interoperability layer for Ethereum and other blockchains. In our first [blog post](https://blog.succinct.xyz/post/2022/09/20/proof-of-consensus/) we outlined a vision towards the end-game of interoperability that uses SNARKs to generate succinct proofs of consensus, which can power gas-efficient on-chain light clients. Our first proof of consensus implementation is for the Ethereum sync committee protocol, which we have a more detailed technical explanation of in our latest [blog post](...). As a demonstration, we implement a proof of concept bridge between Goerli (Ethereum test net) and Gnosis Chain.
+At Succinct Labs, we are aiming to build the foundation of a decentralized, permissionless, trust-minimized interoperability layer for Ethereum and other blockchains. In our first [blog post](https://blog.succinct.xyz/post/2022/09/20/proof-of-consensus/) we outlined a vision towards the end-game of interoperability that uses SNARKs to generate succinct proofs of consensus, which can power gas-efficient on-chain light clients. Our first proof of consensus implementation is for the Ethereum sync committee protocol, which we have a more detailed technical explanation of in our latest [blog post](https://blog.succinct.xyz/post/2022/10/29/gnosis-bridge/). As a demonstration, we implement a proof of concept bridge between Goerli (Ethereum test net) and Gnosis Chain.
 
 This repository contains both the zkSNARK circuits as well as the smart contracts needed for our succinct light client implementation, as well as prototype message passing contracts and bridge contracts.
 
