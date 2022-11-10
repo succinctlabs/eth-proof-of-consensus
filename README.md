@@ -12,7 +12,7 @@ This repository contains both the zkSNARK circuits as well as the smart contract
 
 ## Circuits
 
-Our circuits are used to generate a proof of verification of an aggregate BLS signature from at least 2/3s of the sync committee for a particular block header. There are 2 main relevant entry-points: `assert_valid_signed_header.circom`, which generates a proof for BLS signature verification and `sync_committee_committments.circom` which generates a proof mapping the `SSZ` committment for the sync committee validator public keys to a poseidon committment, which is crucial to reducing the number of constraints in the `assert_valid_signed_header` SNARK. More details can be found in our blog post linked above.
+Our circuits are used to generate a proof of verification of an aggregate BLS signature from at least 2/3s of the sync committee for a particular block header. There are 2 main relevant entry-points: `assert_valid_signed_header.circom`, which generates a proof for BLS signature verification and `sync_committee_committments.circom` which generates a proof mapping the `SSZ` commitment for the sync committee validator public keys to a poseidon commitment, which is crucial to reducing the number of constraints in the `assert_valid_signed_header` SNARK. More details can be found in our blog post linked above.
 
 ## Contracts
 
