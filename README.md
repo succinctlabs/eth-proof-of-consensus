@@ -26,3 +26,16 @@ The smart contracts contain 3 subfolders that map to different parts of our impl
 * The `bridge` folder contains a very simplistic implementation of a demo token bridge that allows a user to transfer "Succincts" (an ERC-20 we deployed on Goerli) from Goerli to Gnosis. Once the user deposits into the deposit bridge contract, the deposit bridge contract passes a message to the AMB. After the message is relayed to the AMB on the other side, the Gnosis AMB executes the message after verifying that the same message is indeed contained in the storage of the AMB on Goerli. This is done by the Gnosis AMB calling the light client smart contract and verifying a storage proof against the Goerli state root stored in the light client.
 
 These contracts are **prototypes** that serve as a useful proof of concept to demonstrate how such a succinct light-client based bridge design might work. We are closely working with the Gnosis Chain team to develop a production-ready specification of a light-client and AMB with that can appropriately handle edge cases and has the appropriate guardrails for this very new zkSNARK technology.
+
+## Building
+
+### Contracts
+
+This repo uses [Foundry](https://getfoundry.sh/) for Solidity development.
+
+From the `/contracts` directory run:
+
+```
+forge install
+forge build
+```
